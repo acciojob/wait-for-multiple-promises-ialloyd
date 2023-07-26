@@ -1,7 +1,7 @@
 //your JS code here. If required.
 const output = document.querySelector('#output');
 const loadingRow = document.createElement('tr');
-loadingRow.id = 'loadingRow';
+loadingRow.id = 'loading';
 const loadingCell = document.createElement('td');
 loadingCell.colSpan = 2;
 loadingCell.textContent = 'Loading...';
