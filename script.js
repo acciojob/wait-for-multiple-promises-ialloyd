@@ -9,7 +9,6 @@ loadingRow.appendChild(loadingCell);
 output.appendChild(loadingRow);
 
 const promises = [];
-const start = performance.now();
 
 for (let i = 0; i < 3; i++) {
     promises.push(new Promise((resolve) => {
@@ -39,7 +38,7 @@ Promise.all(promises).then((results) => {
     totalNameCell.textContent = 'Total';
     totalRow.appendChild(totalNameCell);
     const totalTimeCell = document.createElement('td');
-    totalTimeCell.textContent = ((performance.now() - start) / 1000).toFixed(3);
+    totalTimeCell.textContent = (totalTime).toFixed(3);
     totalRow.appendChild(totalTimeCell);
     output.appendChild(totalRow);
 });
