@@ -23,7 +23,8 @@ Promise.all(promises).then((results) => {
     output.removeChild(loadingRow);
     let totalTime = 0;
     results.forEach(([name, time]) => {
-        totalTime += time;
+        totalTime=Math.max(totalTime,time)
+		
         const row = document.createElement('tr');
         const nameCell = document.createElement('td');
         nameCell.textContent = name;
